@@ -208,7 +208,7 @@ public:
     String type = request->contentType();
     type.toLowerCase();
 
-    if ( !type.indexOf(JSON_MIMETYPE) >= 0)
+    if ( !type.startsWith(JSON_MIMETYPE))
       return false;
 
     request->addInterestingHeader("ANY");
